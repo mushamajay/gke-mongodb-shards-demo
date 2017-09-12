@@ -92,6 +92,10 @@ sleep 15
 echo "Deploying GKE Deployment & Service for some Mongos Routers"
 kubectl apply -f ../resources/mongodb-mongos-deployment.yaml
 
+# Deploy some Mongos Routers using a Deployment
+echo "connecting the application server and router mango by adding the service function"
+kubectl apply -f ../resources/mongodb-mongos-deployment.yaml
+
 
 # Add Shards to the Configdb
 echo "Sleeping for 20 seconds to allow all the Mongos routers to come up"
